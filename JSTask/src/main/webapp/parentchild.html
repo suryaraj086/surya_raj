@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="script/myscript.js"></script>
+<script type="text/javascript">
+function breakLine() {
+	const brk=document.createElement("br");
+	document.body.appendChild(brk);
+}
+</script>
+<script type="text/javascript">
+function boxCreation()
+{
+var number=document.getElementById("number").value;
+for(var a=0;a<number;a++)
+	{
+	breakLine();
+	breakLine();
+	
+	const label=document.createElement("label");
+	label.setAttribute("value","Father");
+	label.innerText="Father ";
+	document.body.appendChild(label);
+	
+	const input = document.createElement("input");
+	input.setAttribute("id", "parent");
+	input.setAttribute("name", "parent");
+	input.setAttribute("type", "text");
+	document.body.appendChild(input);
+	
+	const label1=document.createElement("label");
+	label1.setAttribute("value","Son");
+	label1.innerText=" son ";
+	document.body.appendChild(label1);
+	
+	const child = document.createElement("input");
+	child.setAttribute("id", "child");
+	child.setAttribute("name", "child");
+	child.setAttribute("type", "text");
+	document.body.appendChild(child);
+	
+	}
+breakLine();
+breakLine();
+
+	const button= document.createElement("input");
+	button.setAttribute("id", "submit");
+	button.setAttribute("type", "submit");
+	button.setAttribute("value", "submit");
+	button.setAttribute("onclick", "load()")
+	document.body.appendChild(button);
+}
+</script>
+<script>
+function load()
+{
+	breakLine();
+	breakLine();
+	const input = document.createElement("input");
+	input.setAttribute("id", "search");
+	input.setAttribute("name", "search");
+	input.setAttribute("type", "text");
+	document.body.appendChild(input);
+	breakLine();
+	breakLine();
+	const button= document.createElement("input");
+	button.setAttribute("id", "submit");
+	button.setAttribute("type", "submit");
+	button.setAttribute("value", "search");
+	button.setAttribute("onclick", "getChild()")
+	document.body.appendChild(button);
+	}
+</script>
+
+</head>
+<body>
+<label>Enter the number of text box you want to create: </label>
+<input type="number" id="number"> 
+<button onclick="boxCreation()">submit</button>
+<label id="message"></label>
+</body>
+</html>

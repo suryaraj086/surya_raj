@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="script/myscript.js"></script>
+<title>Convert to binary</title>
+<script type="text/javascript">
+function binary() {
+	var value=document.getElementById("input").value;
+	var out=toBinary(value);
+	document.getElementById("value").innerHTML+="<br>Binary value is "+out;
+	var count=0;
+	for(let ch=0;ch<out.length;ch++)
+		{
+		if(out.charAt(ch)=="1")
+				{
+			count++;
+				}
+		}
+	document.getElementById("value").innerHTML+="<br>The number of 1's are "+count;
+}
+</script>
+</head>
+<body>
+<input type="number" name="value" id="input">
+<input type="submit" onclick="binary()">
+<label id="value"></label>
+</body>
+</html>

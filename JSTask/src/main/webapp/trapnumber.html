@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="script/myscript.js"></script>
+</head>
+<body>
+<h1>Finding the trap number</h1>
+<button onclick="load()">Find the trap number</button>
+  <script>
+  function load(){
+      const data = trapFinder(3,13,5); 
+      var size=data.size;
+ for(var show of data )
+	 {
+	 document.getElementById("myList").innerHTML+="<li>("+show+")\n</li>";
+	 }
+ document.getElementById("show").innerHTML+="\nThe size of trap number is "+size;
+  }
+    </script>
+ <ul id="myList"></ul>
+ <label id="show"></label>
+</body>
+</html>

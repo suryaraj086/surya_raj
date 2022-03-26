@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculator</title>
+<script src="script/myscript.js"></script>
+<style type="text/css">
+#displayer
+{
+font-weight: bold;
+font-size: 25px;
+}
+#display{
+height: 70px;
+width: 100%;
+padding: 3px;
+background-color: white;
+border-radius: 10px; 
+box-shadow: 4px 8px black; 
+margin-left: -3px;
+}
+input[type=button]
+{
+  height: 63px;
+  width: 63px;
+  border-radius: 10px;
+  border: 1px solid #c4c4c4;
+  background-color: #000000a6;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 1px rgba(255,255,255,.4);
+  box-shadow: 3px 8px black;
+}
+input[type=button]:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+input[type=text]
+{
+height: 50px;
+font-size: 24px; 
+width: 100%;
+text-align: right;
+}
+
+#table{
+ padding: 4px;
+ border-spacing: 14px;
+ width: 100%;
+}
+
+#form
+{
+padding:30px; 
+margin: auto; 
+margin-top:150px; 
+height: 561px;
+width:303px; 
+border: 1px solid black;
+background:  linear-gradient(#e66465, #9198e5); /*lightslategray;*/
+border-radius: 30px; 
+box-shadow: 5px 10px black;
+padding-left: 28px;
+}
+#displayer1
+{
+height: 15px;
+border:none;
+width: 290px;
+padding: 3px;
+font-size: 19px;
+}
+#displayer
+{
+height: 33px;
+border-color: white;
+width:290px	;
+}
+#div_table{
+width: 347px;
+margin-left: -20px;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<form id="form">
+<div id="display">
+<input type="text"  id="displayer1" readonly="readonly">
+<input type="text"  id="displayer" placeholder="0" readonly="readonly">
+</div>
+<div id="div_table">
+<table id="table">
+<tr>
+<th><input type="button" value="AC" onclick="calci(ac)" id="ac" name="button"></th>
+<th><input type="button" value="CE" onclick="calci(ce)" id="ce" name="button"></th>
+<th><input type="button" value="(" onclick="calci('(')" id="(" name="button"></th>
+<th><input type="button" value=")" onclick="calci(')')" id=")" name="button"></th>
+</tr>
+
+<tr>
+<th><input type="button" value="1" onclick="calci(1)" id="1" name="button"></th>
+<th><input type="button" value="2" onclick="calci(2)" id="2" name="button"></th>
+<th><input type="button" value="3" onclick="calci(3)" id="3" name="button"></th>
+<th><input type="button" value="+" onclick="calci('+')" id="+" name="button"></th>
+</tr>
+
+<tr>
+<td><input type="button" value="4" onclick="calci(4)" id="4" name="button"></td>
+<td><input type="button" value="5" onclick="calci(5)" id="5" name="button"></td>
+<td><input type="button" value="6" onclick="calci(6)" id="6" name="button"></td>
+<td><input type="button" value="-" onclick="calci('-')" id="-" name="button"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="7" onclick="calci(7)" id="7" name="button"></td>
+<td><input type="button" value="8" onclick="calci(8)" id="8" name="button"></td>
+<td><input type="button" value="9" onclick="calci(9)" id="9" name="button"></td>
+<td><input type="button" value="/" onclick="calci('/')" id="/" name="button"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="0"  onclick="calci(0)" id="0" name="button"></td>
+<td><input type="button" value="." onclick="calci('.')" id="." name="button"></td>
+<td><input type="button" value="=" onclick="equals()" id="=" name="button"></td>
+<td><input type="button" value="*" onclick="calci('*')" id="*" name="button"></td>
+</tr>
+
+<tr>
+
+<td><input type="button" value="&radic;"  onclick="calci('radic')" id="radic" name="button"></td>
+<td><input type="button" value="^2" onclick="calci('square')" id="square" name="button"></td>
+<td><input type="button" value="%" onclick="calci('%')" id="=" name="button"></td>
+<td><input type="button" value="&pi;" onclick="calci('pi')" id="*" name="button"></td>
+</tr>
+
+</table>
+<!-- <input type="button" value="*" onclick="evaluator('12-6+4')" id="asdasd" name="button"> -->
+</div>
+</form>
+<input type="hidden" id="hidden" value="0">
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>STATUS</title>
+<style>
+.line {
+  border-left: 2px solid lightgrey;
+  height: 1000px;
+  display: inline-block;
+  margin-left: 90px;
+  margin-top: -17px;
+  
+}
+.dot {
+  height: 55px;
+  width: 55px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  float: left;
+}
+body{
+background-color: #2F4F4F;
+}
+.name{
+height: 55px;
+width: 200px;
+margin-top: 50px;
+float: left;
+margin-left: -54px;
+}
+#add
+{
+float: right;
+width: 70%;
+
+}
+</style>
+<script type="text/javascript">
+function addStatus(param) {
+	if(param=='open')
+		{
+	document.getElementById("add").style.display="block";
+		}
+	else
+		{
+		let name=document.getElementById("fname").value;
+		let url=document.getElementById("URL").value;
+		document.getElementById("add").style.display="none";
+		document.getElementById("image").style.display="block"
+	    alert(url);
+		var img=document.getElementById("image");
+		img.src=url;
+		}
+}
+
+</script>
+</head>
+<body>
+<span class="dot"></span>
+<br>
+<div class="name"><button style="  background-color: transparent; color:white; border: none; font-size: 20px;" onclick="addStatus('open')">Add status</button><span class="dot"></span></div>
+
+<div class="line"></div>
+<div id="add" style="display: none;">
+<form>
+  <label for="fname" style="color: white;">Name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname" style="color : white;">URL:</label><br>
+  <input type="text" id="URL" name="lname">
+  <input type="submit" value="submit" onclick="addStatus('close')"> 
+</form>
+</div>
+<img style="display: block;" id="image"  src="" alt="" >
+</body>
+</html>
